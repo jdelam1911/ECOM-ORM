@@ -24,7 +24,7 @@ router.get('/:id', async (req, res) => {
       include: [{ model: Product, through: ProductTag, as: 'productTag_products' }]
     });
     if (!tagData) {
-      res.status(400).json({ message: 'No Product found with this id' });
+      res.status(400).json({ message: 'Nothing found with thi ID' });
       return;
     }
 
